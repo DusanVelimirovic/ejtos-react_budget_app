@@ -10,7 +10,8 @@ const Budget = () => {
   const totalExpenses = expenses.reduce((total, item) => {
     return (total += item.cost);
   }, 0);
-  console.log(`Total expences ${totalExpenses}`);
+
+  
   const onChangeBudgetHandler = (event) => {
     const enteredValue = Number(event.target.value);
 
