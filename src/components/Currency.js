@@ -2,10 +2,14 @@ import React, { useContext, useState } from 'react';
 import { AppContext } from '../context/AppContext';
 
 const Currency = () => {
+
+  //get current global state
   const { currency, dispatch } = useContext(AppContext);
 
+  //state hook update our component
   const [isOpen, setIsOpen] = useState(false);
 
+  //update currency in global state
   const setCurrencyHandler = (currency) => {
     dispatch({
       type: 'CHG_CURRENCY',

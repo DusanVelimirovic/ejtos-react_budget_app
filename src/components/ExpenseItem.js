@@ -5,8 +5,11 @@ import { TiDelete} from 'react-icons/ti';
 import { AppContext } from '../context/AppContext';
 
 const ExpenseItem = (props) => {
+    
+    //get current global state
     const { currency, dispatch } = useContext(AppContext);
 
+    //update global state
     const handleDeleteExpense = () => {
         dispatch({
             type: 'DELETE_EXPENSE',
@@ -14,6 +17,7 @@ const ExpenseItem = (props) => {
         });
     };
 
+    //increase allocation found
     const increaseAllocation = (name) => {
         const expense = {
             name: name,
@@ -27,6 +31,7 @@ const ExpenseItem = (props) => {
 
     }
     
+    //decrease allocation found
     const decreaseAllocation = (name) => {
         const expense = {
             name: name,
